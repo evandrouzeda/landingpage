@@ -1,11 +1,14 @@
-import Z, { ZeyoAs } from "zeyo";
 import App from "../../app";
+import LayoutContainer from "../../componentes/layoutContainer";
+import Header from "./components/hearder";
+import Hero from "./components/hero";
 
-export default class RootPage extends ZeyoAs<"main"> {
+export default class RootPage extends LayoutContainer {
     constructor(app: App){
-        super("main")
+        super()
         this.children(
-            Z("h1").text("Início de tudo")
+            new Header(app),
+            new Hero(app)
         )
     }
 }
