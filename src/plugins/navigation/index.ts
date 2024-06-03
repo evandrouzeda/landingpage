@@ -89,7 +89,7 @@ export default class Navigation {
         if (this.state.page) {
             const page = new this.state.page(app)
             app.root.innerHTML = ""
-            app.root.appendChild((await page.create()).element);
+            app.root.appendChild(page.element);
         }
     }
 }

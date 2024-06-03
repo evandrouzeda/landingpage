@@ -9,6 +9,7 @@ export default function NavigationPlugin<Base extends ZeyoAppConstructor>(base: 
         navigation: Navigation = new Navigation(new Root({}))
         setNavgation(childrens: Childrens, rootPage: any, app: App) {
             this.navigation = new Navigation(new Root(rootPage));
+            this.navigation.setPage(app)
             window.onpopstate = e => {
                 e.preventDefault()
                 console.log("entro aqui", window.location.hash, app.hash.on)

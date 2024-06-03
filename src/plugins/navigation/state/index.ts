@@ -26,7 +26,7 @@ export interface State {
     previous?: State
     forward?: State
     parametros: {[key: string]: string}
-    page?: any
+    page?: new (app: App) => Zeyo
     setComponente(app: App): Promise<Zeyo>
     setup(): Promise<void>
     name: string

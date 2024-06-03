@@ -1,4 +1,4 @@
-import { StateBaseConstructor } from "../../navigation/state";
+import { StateBaseConstructor } from "../../plugins/navigation/state";
 
 export default function ParametrosGenerico<Base extends StateBaseConstructor>(base: Base) {
     return class extends base {
