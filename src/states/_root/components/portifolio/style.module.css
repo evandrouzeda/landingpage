@@ -1,6 +1,6 @@
 .portifolio {
     gap: 2rem !important;
-    margin-bottom: 4rem;
+    margin: 4rem 0;
 }
 .portifolio>div {
     border-radius: .5rem;
