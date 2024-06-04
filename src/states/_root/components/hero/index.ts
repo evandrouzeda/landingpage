@@ -7,7 +7,10 @@ export default class Hero extends LayoutContainerSection {
     constructor(app: App){
         super()
         this.class(style.hero).children(
-            Z("h1").text("Every thing is working greate 😀👍")
+            Z("h1").class(style["primeiro"]).text("Webdesigner"),
+            Z("h1").class(style["segundo"]).text("&"),
+            Z("h1").class(style["terceiro"]).text("Fullstack"),
+            Z("h1").class(style["quarto"]).text("developer")
         )
     }
 }

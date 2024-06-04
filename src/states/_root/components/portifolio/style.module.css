@@ -1,0 +1,75 @@
+.portifolio {
+    gap: 2rem !important;
+    margin-bottom: 4rem;
+}
+.portifolio>div {
+    border-radius: .5rem;
+    padding: 1rem;
+    height: calc(100% - 2rem);
+    position: relative;
+}
+
+.portifolio>div>div {
+    background: white;
+    height: 125px;
+    position: absolute;
+    width: 350px;
+    bottom: -1rem;
+    border-radius: .5rem;
+    right: -1rem;
+}
+
+.portifolio>div.primeiro {
+    grid-column-end: span 3;
+    grid-row-end: span 2;
+    height: 400px;
+}
+
+.portifolio>div.primeiro>div {
+    height: 200px;
+    width: calc(100% + 2rem);
+    left: -1rem;
+    border-radius: .5rem;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.portifolio>div.segundo {
+    grid-column-end: span 9;
+    grid-row-end: span 1;
+}
+
+.portifolio>div.terceiro {
+    grid-column-end: span 5;
+    background-color: lightskyblue;
+    grid-row-end: span 1;
+}
+
+.portifolio>div.quarto {
+    grid-column-end: span 4;
+    grid-row-end: span 1;
+}
+
+.portifolio>div.quarto>div {
+    width: 100%;
+}
+
+.verde {
+    background-color: #C1FF72;
+    color: #232e14;
+}
+
+.amarelo {
+    background-color: #FFE072;
+    color: #221e0f;
+}
+
+.azul {
+    background-color: #5BECFF;
+    color: #0b1c1f;
+}
+
+.vermelho {
+    background-color: #FF766D;
+    color: #1f0e0d;
+}
