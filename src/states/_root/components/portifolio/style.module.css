@@ -7,8 +7,25 @@
     padding: 1rem;
     height: calc(100% - 2rem);
     position: relative;
+    transition: all .25s cubic-bezier(.6,-0.28,.74,.05);
+    opacity: 0;
 }
-
+.portifolio>div.left {
+    transform: translate(-30%);
+}
+.portifolio>div.right {
+    transform: translate(30%);
+}
+.portifolio>div.top {
+    transform: translate(0,-30%);
+}
+.portifolio>div.bottom {
+    transform: translate(0,30%);
+}
+.portifolio>div.show {
+    opacity: 1;
+    transform: translate(0);
+}
 .portifolio>div>div {
     background: white;
     height: 125px;
