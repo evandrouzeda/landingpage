@@ -1,0 +1,37 @@
+.section {
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.brands {
+    display: flex;
+    overflow: hidden;
+}
+
+.brands span {
+    animation: marquee linear infinite;
+    display: flex;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.brands span.fast {
+    animation-duration: 5s;
+}
+.brands span.slow {
+    animation-duration: 10s;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.brands span img {
+    width: 100px;
+}
+
+.brands span.fast img {
+    width: 150px;
+}

@@ -66,3 +66,6 @@
     display: grid;
     grid-template-columns: inherit;
 }
+.full-width-only {
+    grid-column: full-width !important;
+}

@@ -6,13 +6,11 @@ export default class Header extends LayoutContainerBreakout<"header"> {
     constructor(app: App) {
         super("header")
         
-        this.children(
+        this.class(style.header).children(
             Z("div").class(style.logo).children(
-                Z("img").set("src", "/_img/logo.png"),
                 Z("p").children(
-                    Z("b").text("Zeyo"),
-                    Z("br"),
-                    Z("i").text("Framework")
+                    Z("b").text("Evandro "),
+                    Z("i").text("Uzeda")
                 )
             ),
         )
