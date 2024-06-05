@@ -1,11 +1,9 @@
 import { ZeyoAs } from "zeyo";
-import style from "./style.module.css"
+import LayoutContainerStyles from "./style";
 
-export default class LayoutContainerFullWidth<T extends keyof HTMLElementTagNameMap> extends ZeyoAs<T> {
-    free = style.free
-    fullWidth = style["full-width-only"]
+export default class LayoutContainerFullWidth<T extends keyof HTMLElementTagNameMap> extends LayoutContainerStyles(ZeyoAs<keyof HTMLElementTagNameMap>) {
     constructor(tagName: T){
         super(tagName)
-        this.class(style["full-width"])
+        this.class(this.layout.fullWidth)
     }
 }

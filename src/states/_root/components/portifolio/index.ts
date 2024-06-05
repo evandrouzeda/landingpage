@@ -2,6 +2,7 @@ import Z, { ZeyoAs } from "zeyo";
 import LayoutContainerSection from "../../../../componentes/layoutContainer/section";
 import App from "../../../../app";
 import style from "./style.module.css"
+import ToggleSwitch from "../../../../componentes/toggleSwitch";
 
 export default class Portifolio extends LayoutContainerSection {
     actived = false
@@ -11,20 +12,28 @@ export default class Portifolio extends LayoutContainerSection {
     constructor(app: App) {
         super()
         this.class(style.portifolio).children(
+            Z("h2").text("Implementou").class(this.layout.free),
             Z("div").class(style.primeiro, style.verde, style.left).children(
-                Z("p").text("Landing Page"),
+                Z("b").text("Landing Page"),
                 Z("div")
             ),
-            Z("div").class(style.segundo, style.amarelo, style.top).children(
-                Z("p").text("Aplicativo para automação residencial"),
-                Z("div")
-            ),
+            Z("div").class(style.segundo, style.amarelo, style.top).object(o => {
+                o.children(
+                    Z("b").text("Aplicativo para automação residencial"),
+                    Z("div").class(style.automacao).children(
+                        Z("h2").text("Luz da Sala"),
+                        new ToggleSwitch(app).checked().onChange(() => {
+                            o.element.classList.toggle(style.cinza)
+                        })
+                    )
+                )
+            }),
             Z("div").class(style.terceiro, style.azul, style.bottom).children(
-                Z("p").text("Skill Alexa para integrar via Lambda com a Plataforma de automação residencial"),
+                Z("b").text("Skill Alexa para integrar via Lambda com a Plataforma de automação residencial"),
                 Z("div")
             ),
             Z("div").class(style.quarto, style.vermelho, style.right).children(
-                Z("p").text("Aplicativo para festival de Restaurantes"),
+                Z("b").text("Aplicativo para festival de Restaurantes"),
                 Z("div")
             ),
         ).object(async (o) => {

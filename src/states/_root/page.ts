@@ -12,9 +12,9 @@ export default class RootPage extends LayoutContainer {
         this.class(style.main).children(
             new Header(app),
             new Hero(app),
-            new InfiniteCarrossel(app, "Trabalhou em:", ["logo_livtech.svg", "alasmenu-logo.svg", "isologo.svg"]),
+            new InfiniteCarrossel(app, "Possue conhecimento em", ["javascript.svg", "typescript.svg", "python.svg", "golang.svg", "pwa.svg", "nodejs.svg", "mongodb.svg", "postgresql.svg", "mysql.svg", "terminal.svg", "linux.svg", "aws.svg", "docker.svg", "figma.svg"]),
             new Portifolio(app),
-            new InfiniteCarrossel(app, "Tecnologias que já utilizou:", ["javascript.svg", "typescript.svg", "python.svg", "golang.svg", "pwa.svg", "mongodb.svg", "nodejs.svg", "postgresql.svg", "mysql.svg", "aws.svg"]),
+            new InfiniteCarrossel(app, "Prestou serviço para", ["logo_livtech.svg", "alasmenu-logo.svg", "isologo.svg"]),
         )
     }
 }

@@ -1,9 +1,9 @@
 import { ZeyoAs } from "zeyo";
-import style from "./style.module.css"
+import LayoutContainerStyles from "./style";
 
-export default class LayoutContainer extends ZeyoAs<"main"> {
+export default class LayoutContainer extends LayoutContainerStyles(ZeyoAs<"main">) {
     constructor(){
         super("main")
-        this.class(style.grid)
+        this.class(this.layout.grid)
     }
 }

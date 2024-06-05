@@ -2,30 +2,37 @@
     gap: 2rem !important;
     margin: 4rem 0;
 }
+
 .portifolio>div {
     border-radius: .5rem;
     padding: 1rem;
     height: calc(100% - 2rem);
     position: relative;
-    transition: all .25s cubic-bezier(.6,-0.28,.74,.05);
+    transition: all .25s cubic-bezier(.6, -0.28, .74, .05);
     opacity: 0;
 }
+
 .portifolio>div.left {
     transform: translate(-30%);
 }
+
 .portifolio>div.right {
     transform: translate(30%);
 }
+
 .portifolio>div.top {
-    transform: translate(0,-30%);
+    transform: translate(0, -30%);
 }
+
 .portifolio>div.bottom {
-    transform: translate(0,30%);
+    transform: translate(0, 30%);
 }
+
 .portifolio>div.show {
     opacity: 1;
     transform: translate(0);
 }
+
 .portifolio>div>div {
     background: white;
     height: 125px;
@@ -89,4 +96,16 @@
 .vermelho {
     background-color: #FF766D;
     color: #1f0e0d;
+}
+
+.cinza {
+    background-color: #b1b1b1;
+    color: #202020;
+}
+
+.automacao {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
 }
