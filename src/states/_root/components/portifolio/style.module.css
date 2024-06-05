@@ -1,9 +1,13 @@
 .portifolio {
-    gap: 2rem !important;
     margin: 4rem 0;
+    gap: 1.5rem !important;
 }
 
-.portifolio>div {
+.container {
+    gap: 2rem !important;
+}
+
+.container>div {
     border-radius: .5rem;
     padding: 1rem;
     height: calc(100% - 2rem);
@@ -12,28 +16,28 @@
     opacity: 0;
 }
 
-.portifolio>div.left {
+.container>div.left {
     transform: translate(-30%);
 }
 
-.portifolio>div.right {
+.container>div.right {
     transform: translate(30%);
 }
 
-.portifolio>div.top {
+.container>div.top {
     transform: translate(0, -30%);
 }
 
-.portifolio>div.bottom {
+.container>div.bottom {
     transform: translate(0, 30%);
 }
 
-.portifolio>div.show {
+.container>div.show {
     opacity: 1;
     transform: translate(0);
 }
 
-.portifolio>div>div {
+.container>div>div {
     background: white;
     height: 125px;
     position: absolute;
@@ -43,13 +47,13 @@
     right: -1rem;
 }
 
-.portifolio>div.primeiro {
+.container>div.primeiro {
     grid-column-end: span 3;
     grid-row-end: span 2;
     height: 400px;
 }
 
-.portifolio>div.primeiro>div {
+.container>div.primeiro>div {
     height: 200px;
     width: calc(100% + 2rem);
     left: -1rem;
@@ -58,23 +62,23 @@
     transform: translate(0, -50%);
 }
 
-.portifolio>div.segundo {
+.container>div.segundo {
     grid-column-end: span 9;
     grid-row-end: span 1;
 }
 
-.portifolio>div.terceiro {
+.container>div.terceiro {
     grid-column-end: span 5;
     background-color: lightskyblue;
     grid-row-end: span 1;
 }
 
-.portifolio>div.quarto {
+.container>div.quarto {
     grid-column-end: span 4;
     grid-row-end: span 1;
 }
 
-.portifolio>div.quarto>div {
+.container>div.quarto>div {
     width: 100%;
 }
 
