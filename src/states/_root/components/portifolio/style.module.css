@@ -37,14 +37,19 @@
     transform: translate(0);
 }
 
-.container>div>div {
-    background: white;
-    height: 125px;
+.breakout,
+.card {
     position: absolute;
-    width: 350px;
     bottom: -1rem;
-    border-radius: .5rem;
     right: -1rem;
+    height: 125px;
+    width: 350px;
+}
+
+.card,
+.cardonly {
+    background: white;
+    border-radius: .5rem;
 }
 
 .container>div.primeiro {
@@ -53,13 +58,16 @@
     height: 400px;
 }
 
-.container>div.primeiro>div {
-    height: 200px;
+.container>div.primeiro>.breakout {
+    height: inherit;
     width: calc(100% + 2rem);
     left: -1rem;
-    border-radius: .5rem;
-    top: 50%;
-    transform: translate(0, -50%);
+    bottom: auto;
+    padding: 1rem 0;
+    display: grid;
+    align-items: center;
+    align-content: start;
+    gap: 1rem;
 }
 
 .container>div.segundo {
@@ -78,7 +86,7 @@
     grid-row-end: span 1;
 }
 
-.container>div.quarto>div {
+.container>div.quarto>.card {
     width: 100%;
 }
 

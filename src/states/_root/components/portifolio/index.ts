@@ -3,6 +3,7 @@ import LayoutContainerSection from "../../../../componentes/layoutContainer/sect
 import App from "../../../../app";
 import style from "./style.module.css"
 import ToggleSwitch from "../../../../componentes/toggleSwitch";
+import CarrosselVerticalButton from "../../../../componentes/carrosselVerticalButton";
 
 export default class Portifolio extends LayoutContainerSection {
     actived = false
@@ -16,12 +17,18 @@ export default class Portifolio extends LayoutContainerSection {
             Z("div").class(style.container).children(
                 Z("div").class(style.primeiro, style.verde, style.left).children(
                     Z("b").text("Landing Page"),
-                    Z("div")
+                    new CarrosselVerticalButton(
+                        Z("div").class(style.cardonly).children(
+                            Z("p").text("1"),
+                            Z("p").text("2"),
+                            Z("p").text("3"),
+                        )
+                    ).class(style.breakout)
                 ),
                 Z("div").class(style.segundo, style.amarelo, style.top).object(o => {
                     o.children(
                         Z("b").text("Aplicativo para automação residencial"),
-                        Z("div").class(style.automacao).children(
+                        Z("div").class(style.card, style.automacao).children(
                             Z("h2").text("Luz da Sala"),
                             new ToggleSwitch(app).checked().onChange(() => {
                                 o.element.classList.toggle(style.cinza)
@@ -31,11 +38,11 @@ export default class Portifolio extends LayoutContainerSection {
                 }),
                 Z("div").class(style.terceiro, style.azul, style.bottom).children(
                     Z("b").text("Skill Alexa para integrar via Lambda com a Plataforma de automação residencial"),
-                    Z("div")
+                    Z("div").class(style.card)
                 ),
                 Z("div").class(style.quarto, style.vermelho, style.right).children(
                     Z("b").text("Aplicativo para festival de Restaurantes"),
-                    Z("div")
+                    Z("div").class(style.card)
                 ),
             ).object(async (o) => {
                 window.addEventListener("scroll", () => {
