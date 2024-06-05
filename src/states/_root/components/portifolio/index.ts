@@ -19,9 +19,9 @@ export default class Portifolio extends LayoutContainerSection {
                     Z("b").text("Landing Page"),
                     new CarrosselVerticalButton(
                         Z("div").class(style.cardonly).children(
-                            Z("p").text("1"),
-                            Z("p").text("2"),
-                            Z("p").text("3"),
+                            Z("p").text("1").object(o => o.element.style.background = "#232e14"),
+                            Z("p").text("2").object(o => o.element.style.background = "lightskyblue"),
+                            Z("p").text("3").object(o => o.element.style.background = "#ff766d"),
                         )
                     ).class(style.breakout)
                 ),
