@@ -22,6 +22,9 @@ export default class Portifolio extends LayoutContainerSection {
                             Z("p").text("1").object(o => o.element.style.background = "#232e14"),
                             Z("p").text("2").object(o => o.element.style.background = "lightskyblue"),
                             Z("p").text("3").object(o => o.element.style.background = "#ff766d"),
+                            Z("p").text("4").object(o => o.element.style.background = "#ff766d"),
+                            Z("p").text("5").object(o => o.element.style.background = "#ff766d"),
+                            Z("p").text("6").object(o => o.element.style.background = "#ff766d"),
                         )
                     ).class(style.breakout)
                 ),

@@ -9,6 +9,7 @@
     border: none;
     color: #C1FF72;
     height: calc(30px + 2rem);
+    cursor: pointer;
 }
 
 .container button:hover {
